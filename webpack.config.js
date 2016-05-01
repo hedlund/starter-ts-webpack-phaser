@@ -57,6 +57,11 @@ module.exports = {
                 include: PATHS.src
             },
             {
+                test: /\.frag$/,
+                loaders: ['phaser-glsl-loader'],
+                include: PATHS.src
+            },
+            {
                 test: /\.json$/,
                 loaders: ['json'],
                 include: [PATHS.src, PATHS.p2]
