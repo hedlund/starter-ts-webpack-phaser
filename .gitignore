@@ -1,6 +1,6 @@
 node_modules
 coverage
+.vscode
 npm-debug.log
-.eslintcache
 
 public/app.js*

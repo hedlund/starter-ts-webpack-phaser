@@ -1,7 +1,3 @@
-/* eslint-disable import/no-unresolved */
-import 'pixi';
-import 'p2';
-import Phaser from 'phaser';
 import Boot from './states/Boot';
 import Loader from './states/Loader';
 import Main from './states/Main';
@@ -19,4 +15,5 @@ class Game extends Phaser.Game {
     }
 }
 
+/* tslint:disable:no-unused-expression */
 new Game();

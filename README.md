@@ -1,18 +1,20 @@
-# Yet Another Webpack & Phaser Starter
+# Yet Another Webpack, TypeScript & Phaser Starter
 
->A fork of my [Webpack Starter](https://github.com/hedlund/starter-webpack).
+>A fork of my [Webpack & Typescript Starter](https://github.com/hedlund/starter-ts-webpack) and my
+[Webpack & Phaser Starter](https://github.com/hedlund/starter-webpack-phaser).
 
 Including, but not limited to, the following:
 
 * `webpack` (d'oh)
 * `webpack-dev-server` for development & hot module reloading
-* `babel` for ES6 transpiling, including stage 0 support
-* `eslint` for code hygiene
+* `babel` for TypeScript transpiling, including stage 0 support
+* `tslint` for code hygiene
 * `mocha`, `chai` & `sinon` for testing
 * `istanbul` for code coverage
 * `phaser`, `pixi.js` and `p2` for the game engine
 * `phaser-debug` for improved debugging
 * `phaser-glsl-loader` to simplify shader loading
+* `typings` for type definitions
 
 ## Usage
 

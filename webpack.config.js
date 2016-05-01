@@ -19,14 +19,16 @@ module.exports = {
     entry: {
         app: [
             'babel-polyfill',
-            './Game.js'
+            'pixi', 'p2', 'phaser',
+            './Game.ts'
         ]
     },
     resolve: {
-        extensions: ['', '.js'],
+        extensions: ['', '.ts', '.js'],
         alias: {
             phaser: path.join(PATHS.phaser, 'phaser-split.js'),
             pixi: path.join(PATHS.phaser, 'pixi.js'),
+            p2: path.join(PATHS.p2, 'src', 'p2.js'),
             'phaser-debug': path.join(PATHS.phaserDebug, 'phaser-debug.js')
         }
     },
@@ -40,8 +42,8 @@ module.exports = {
         ],
         preLoaders: [
             {
-                test: /\.js$/,
-                loaders: ['eslint'],
+                test: /\.ts$/,
+                loaders: ['tslint'],
                 include: PATHS.src
             }
         ],
@@ -49,6 +51,11 @@ module.exports = {
             {
                 test: /\.js$/,
                 loaders: ['babel?cacheDirectory'],
+                include: PATHS.src
+            },
+            {
+                test: /\.ts$/,
+                loaders: ['ts-loader'],
                 include: PATHS.src
             },
             {
@@ -67,7 +74,7 @@ module.exports = {
                 include: [PATHS.src, PATHS.p2]
             },
             {
-                test: /pixi\.js/,
+                test: /pixi\.js$/,
                 loader: 'expose?PIXI'
             },
             {
@@ -75,7 +82,7 @@ module.exports = {
                 loader: 'expose?Phaser'
             },
             {
-                test: /p2\.js/,
+                test: /p2\.js$/,
                 loader: 'expose?p2'
             }
         ]
