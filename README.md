@@ -1,4 +1,6 @@
-# Yet Another Webpack Starter
+# Yet Another Webpack & Phaser Starter
+
+>A fork of my [Webpack Starter](https://github.com/hedlund/starter-webpack).
 
 Including, but not limited to, the following:
 
@@ -8,13 +10,15 @@ Including, but not limited to, the following:
 * `eslint` for code hygiene
 * `mocha`, `chai` & `sinon` for testing
 * `istanbul` for code coverage
+* `phaser`, `pixi.js` and `p2` for the game engine
 
 ## Usage
 
 | Command                 | Description                                 |
 |-------------------------|---------------------------------------------|
-| `npm start`             | Start a dev server with HMR enabled.        |
-| `npm run server`        | Start a dev server with HMR enabled.        |
+| `npm start`             | Start a dev server.                         |
+| `npm run server`        | Start a dev server.                         |
+| `npm run server:reload` | Start a dev server with HMR enabled.        |
 | `npm run build`         | Build the production version of the app.    |
 | `npm run build:prod`    | Build the production version of the app.    |
 | `npm run build:dev`     | Build the developement version of the app.  |
@@ -22,3 +26,6 @@ Including, but not limited to, the following:
 | `npm run test:watch`    | Run the tests & watch for changes.          |
 | `npm run test:coverage` | Run the test coverage analysis.             |
 | `npm run lint`          | Lint the code.                              |
+
+Hot Module Replacement doesn't really work with Phaser, so that isn't enabled by default when
+starting a dev server.

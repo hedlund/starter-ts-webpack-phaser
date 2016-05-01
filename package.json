@@ -1,11 +1,12 @@
 {
-  "name": "starter-webpack",
+  "name": "starter-webpack-phaser",
   "version": "1.0.0",
-  "description": "Yet another webpack starter...",
-  "main": "src/index.js",
+  "description": "Yet another webpack & phaser starter...",
+  "main": "src/Game.js",
   "scripts": {
     "start": "npm run server",
-    "server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config webpack.config.server.js",
+    "server": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.server.js",
+    "server:reload": "npm run server -- --inline --hot",
     "build": "npm run build:prod",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.build.js",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.build.js",
@@ -16,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hedlund/starter-webpack.git"
+    "url": "git+https://github.com/hedlund/starter-webpack-phaser.git"
   },
   "author": "Henrik Hedlund <henrik@hedlund.im>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hedlund/starter-webpack/issues"
+    "url": "https://github.com/hedlund/starter-webpack-phaser/issues"
   },
-  "homepage": "https://github.com/hedlund/starter-webpack#readme",
+  "homepage": "https://github.com/hedlund/starter-webpack-phaser#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.7",
@@ -38,11 +39,13 @@
     "eslint": "^2.8.0",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-import": "^1.6.0",
+    "expose-loader": "^0.7.1",
     "ignore-styles": "^1.2.0",
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^8.4.0",
     "json-loader": "^0.5.4",
     "mocha": "^2.4.5",
+    "phaser": "^2.4.7",
     "postcss-import": "^8.1.0",
     "postcss-loader": "^0.8.2",
     "precss": "^1.4.0",
