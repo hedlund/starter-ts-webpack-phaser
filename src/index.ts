@@ -1,5 +1,5 @@
 import hello from './hello';
 import './index.css';
 
-const root = document.getElementById('app');
+const root: HTMLElement = document.getElementById('app');
 root.appendChild(hello());

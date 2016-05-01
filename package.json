@@ -1,29 +1,29 @@
 {
-  "name": "starter-webpack",
+  "name": "starter-ts-webpack",
   "version": "1.0.0",
-  "description": "Yet another webpack starter...",
-  "main": "src/index.js",
+  "description": "Yet another webpack & typescript starter...",
+  "main": "src/index.ts",
   "scripts": {
     "start": "npm run server",
     "server": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config webpack.config.server.js",
     "build": "npm run build:prod",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.build.js",
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.build.js",
-    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --require ignore-styles --require test.config.js \"src/**/*.tests.js\"",
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --compilers ts:typescript --require ignore-styles --require test.config.js \"src/**/*.tests.ts\"",
     "test:watch": "npm run test -- --watch",
-    "test:coverage": "cross-env NODE_ENV=test istanbul cover _mocha -- --compilers js:babel-register --require ignore-styles --require test.config.js \"src/**/*.tests.js\"",
-    "lint": "eslint src --ext .js --cache || true"
+    "test:coverage": "cross-env NODE_ENV=test istanbul cover _mocha -- --compilers ts:typescript --require ignore-styles --require test.config.js \"src/**/*.tests.ts\"",
+    "lint": "tslint src/**/*.ts || true"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hedlund/starter-webpack.git"
+    "url": "git+https://github.com/hedlund/starter-ts-webpack.git"
   },
   "author": "Henrik Hedlund <henrik@hedlund.im>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hedlund/starter-webpack/issues"
+    "url": "https://github.com/hedlund/starter-ts-webpack/issues"
   },
-  "homepage": "https://github.com/hedlund/starter-webpack#readme",
+  "homepage": "https://github.com/hedlund/starter-ts-webpack#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.7",
@@ -35,9 +35,6 @@
     "chai": "^3.5.0",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
-    "eslint": "^2.8.0",
-    "eslint-loader": "^1.3.0",
-    "eslint-plugin-import": "^1.6.0",
     "ignore-styles": "^1.2.0",
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^8.4.0",
@@ -49,6 +46,11 @@
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "tslint": "^3.8.1",
+    "tslint-loader": "^2.1.4",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.12.0"

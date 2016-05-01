@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import hello from './hello';
+import hello from './hello.ts';
 
 describe('hello', () => {
 

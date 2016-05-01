@@ -1,6 +1,5 @@
 node_modules
 coverage
 npm-debug.log
-.eslintcache
 
 public/app.js*

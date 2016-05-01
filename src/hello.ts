@@ -1,5 +1,5 @@
 const hello = () => {
-    const element = document.createElement('h1');
+    const element: HTMLHeadingElement = document.createElement('h1');
     element.innerHTML = 'Hello World';
     return element;
 };

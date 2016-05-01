@@ -1,13 +1,16 @@
-# Yet Another Webpack Starter
+# Yet Another Webpack & TypeScript Starter
+
+>A fork of my [Webpack Starter](https://github.com/hedlund/starter-webpack).
 
 Including, but not limited to, the following:
 
 * `webpack` (d'oh)
 * `webpack-dev-server` for development & hot module reloading
-* `babel` for ES6 transpiling, including stage 0 support
-* `eslint` for code hygiene
+* `babel` for TypeScript transpiling, including stage 0 support
+* `tslint` for code hygiene
 * `mocha`, `chai` & `sinon` for testing
 * `istanbul` for code coverage
+* `typings` for type definitions
 
 ## Usage
 

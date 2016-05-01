@@ -16,11 +16,11 @@ module.exports = {
     entry: {
         app: [
             'babel-polyfill',
-            './index.js'
+            './index.ts'
         ]
     },
     resolve: {
-        extensions: ['', '.js']
+        extensions: ['', '.ts', '.js']
     },
     output: {
         path: PATHS.build,
@@ -29,8 +29,8 @@ module.exports = {
     module: {
         preLoaders: [
             {
-                test: /\.js$/,
-                loaders: ['eslint'],
+                test: /\.ts$/,
+                loaders: ['tslint'],
                 include: PATHS.src
             }
         ],
@@ -38,6 +38,11 @@ module.exports = {
             {
                 test: /\.js$/,
                 loaders: ['babel?cacheDirectory'],
+                include: PATHS.src
+            },
+            {
+                test: /\.ts$/,
+                loaders: ['ts-loader'],
                 include: PATHS.src
             },
             {
