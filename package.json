@@ -46,6 +46,7 @@
     "json-loader": "^0.5.4",
     "mocha": "^2.4.5",
     "phaser": "^2.4.7",
+    "phaser-debug": "^1.1.8",
     "postcss-import": "^8.1.0",
     "postcss-loader": "^0.8.2",
     "precss": "^1.4.0",

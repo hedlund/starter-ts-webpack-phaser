@@ -11,6 +11,7 @@ Including, but not limited to, the following:
 * `mocha`, `chai` & `sinon` for testing
 * `istanbul` for code coverage
 * `phaser`, `pixi.js` and `p2` for the game engine
+* `phaser-debug` for improved debugging
 
 ## Usage
 

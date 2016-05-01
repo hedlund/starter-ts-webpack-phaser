@@ -7,6 +7,7 @@ var PATHS = {
     src: path.join(__dirname, 'src'),
     build: path.join(__dirname, 'public'),
     phaser: path.join(__dirname, 'node_modules', 'phaser', 'build', 'custom'),
+    phaserDebug: path.join(__dirname, 'node_modules', 'phaser-debug', 'dist'),
     p2: path.join(__dirname, 'node_modules', 'p2')
 };
 
@@ -25,7 +26,8 @@ module.exports = {
         extensions: ['', '.js'],
         alias: {
             phaser: path.join(PATHS.phaser, 'phaser-split.js'),
-            pixi: path.join(PATHS.phaser, 'pixi.js')
+            pixi: path.join(PATHS.phaser, 'pixi.js'),
+            'phaser-debug': path.join(PATHS.phaserDebug, 'phaser-debug.js')
         }
     },
     output: {
@@ -33,6 +35,9 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
+        noParse: [
+            /phaser-debug\.js$/
+        ],
         preLoaders: [
             {
                 test: /\.js$/,

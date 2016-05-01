@@ -30,6 +30,12 @@ class Boot extends State {
 		//this.stage.scale.setScreenSize(true);
 		//this.input.maxPointers = 1;
 
+        // If we're in development mode add the phase-debug plugin
+        if (process.env.NODE_ENV === 'development') {
+            const Debug = require('phaser-debug');
+            this.add.plugin(Debug);
+        }
+
 		// Start the loader state
 		this.game.state.start('loader');
     }
